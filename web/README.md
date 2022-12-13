@@ -2,6 +2,19 @@
 
 ![LOGO](images/heroes-dashboard.png)
 
+# What changed?
+As before, whenever a user clicks on a hero name, the hero detail appears below the hero list. Now the HeroDetailComponent is presenting those details instead of the HeroesComponent.
+
+Refactoring the original HeroesComponent into two components yields benefits, both now and in the future:
+
+You reduced the HeroesComponent responsibilities.
+
+You can evolve the HeroDetailComponent into a rich hero editor without touching the parent HeroesComponent.
+
+You can evolve the HeroesComponent without touching the hero detail view.
+
+You can re-use the HeroDetailComponent in the template of some future component.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
 ## Development server
