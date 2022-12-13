@@ -3,17 +3,19 @@
 ![LOGO](images/heroes-dashboard.png)
 
 # What changed?
-As before, whenever a user clicks on a hero name, the hero detail appears below the hero list. Now the HeroDetailComponent is presenting those details instead of the HeroesComponent.
 
-Refactoring the original HeroesComponent into two components yields benefits, both now and in the future:
+Summary
+You refactored data access to the HeroService class.
+You registered the HeroService as the provider of its service at the root level so that it can be injected anywhere in the application.
+You used Angular Dependency Injection to inject it into a component.
+You gave the HeroService get data method an asynchronous signature.
+You discovered Observable and the RxJS Observable library.
+You used RxJS of() to return Observable<Hero[]>, an observable of mock heroes.
+The component's ngOnInit lifecycle hook calls the HeroService method, not the constructor.
+You created a MessageService for loosely coupled communication between classes.
+The HeroService injected into a component is created with another injected service, MessageService.
 
-You reduced the HeroesComponent responsibilities.
-
-You can evolve the HeroDetailComponent into a rich hero editor without touching the parent HeroesComponent.
-
-You can evolve the HeroesComponent without touching the hero detail view.
-
-You can re-use the HeroDetailComponent in the template of some future component.
+## 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
